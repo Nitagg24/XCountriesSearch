@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const CountryCard = ({ name, flag, altText }) => {
   return (
     <div
-    className="countryCard"
+      className="countryCard"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -57,7 +57,7 @@ function Countires() {
     clearTimeout(window.debounceTimeout);
     window.debounceTimeout = setTimeout(() => {
       setSearch(value);
-    }, 500);
+    }, 100);
   };
 
   const filteredCountries = countries.filter((country) =>
