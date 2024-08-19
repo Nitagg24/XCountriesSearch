@@ -81,7 +81,6 @@ function Countires() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center",
         }}
       >
         {filteredCountries.length > 0 ? (
