@@ -52,14 +52,6 @@ function Countires() {
     fetchData();
   }, []);
 
-  const handleSearch = (e) => {
-    const value = e.target.value;
-    clearTimeout(window.debounceTimeout);
-    window.debounceTimeout = setTimeout(() => {
-      setSearch(value);
-    }, 100);
-  };
-
   const filteredCountries = countries.filter((country) =>
     country.name.common.toLowerCase().includes(search.toLowerCase())
   );
@@ -68,7 +60,7 @@ function Countires() {
       <input
         type="text"
         placeholder="Search for a country..."
-        onChange={handleSearch}
+        onChange={(e) => setSearch(e.target.value)}
         style={{
           width: "100%",
           padding: "10px",
